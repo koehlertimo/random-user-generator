@@ -8,10 +8,13 @@
     <title>Random User Generator</title>
 </head>
 <body>
-    <div id="app">
+    <div id="app" v-on:load>
         <img :class="gender" :src="picture" v-bind:alt="`${firstName} ${lastName}`">
-        <h1>{{firstName}} {{lastName}}</h1>
+        <h1>{{title}} {{firstName}} {{lastName}}</h1>
+        <h3>Age: {{age}}</h3>
         <h3>Email: {{email}}</h3>
+        <h3>Phone: {{phone}}</h3>
+        <h3>Location: {{streetname}} {{streetnumber}} {{city}} {{postalcode}} {{country}}</h3>
         <button v-on:click="getUser()" :class="gender">Get Random User</button>
 
 
